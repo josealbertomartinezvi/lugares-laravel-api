@@ -14,7 +14,15 @@ class CreateLugaresTable extends Migration
     public function up()
     {
         Schema::create('lugares', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('busqueda');
+            $table->string('nombre');
+            $table->string('direccion');
+            $table->string('distancia');
+            $table->string('lat_origen');
+            $table->string('lng_origen');
+            $table->string('lat_destino');
+            $table->string('lng_destino');
             $table->timestamps();
         });
     }
