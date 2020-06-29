@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'lugares', 'middleware' => 'cors'], function() {
+    Route::get('lista', 'LugarController@index');
+    Route::post('nueva', 'LugarController@store');
 });
