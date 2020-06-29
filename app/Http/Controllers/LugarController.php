@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Lugar;
 
 class LugarController extends Controller
 {
@@ -13,13 +14,13 @@ class LugarController extends Controller
      */
     public function index()
     {
-        $lugares;
+        $lugares = Lugar::all();
 
         return response()->json([
-            'susses' => true,
+            'success' => true,
             'data' => $lugares,
             'codigo' => 200
-        ], 200);  
+        ], 200);
     }
 
         /**
@@ -30,10 +31,14 @@ class LugarController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json([
-            'susses' => true,
-            'message' => 'Lugar registrada correctamente.',
-            'codigo' => 200
-        ], 200);
+
+        $nuevoLugar = Lugar::create($request->all());
+        if($nuevoLugar){
+            return response()->json([
+                'success' => true,
+                'message' => 'Lugar registrada correctamente.',
+                'codigo' => 200
+            ], 200);
+        }
     }
 }

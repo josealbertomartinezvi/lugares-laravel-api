@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'lugares', 'middleware' => 'cors'], function() {
+Route::group(['prefix' => 'lugares'], function() {
     Route::get('lista', 'LugarController@index');
     Route::post('nueva', 'LugarController@store');
 });
