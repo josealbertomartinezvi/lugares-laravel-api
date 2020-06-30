@@ -1,6 +1,6 @@
 ## Lugares
 
-Proyecto que utilizando la api de Google Maps permite buscar mediante una palabra o frase un determinado numero de lugares relacionado con aquello que se ha escrito, permitiendo listarlos, su nombre, dirección y distancia en kms desde nuestra ubicaxción actual ademas de permitir organizarlos por distancia para saber que lugar se encuentra más cerca y cual mas lejos.
+Una Api que almacena toda la información de una PWA creada en Ionic-Angular la cual utilizando la api de Google Maps permite buscar mediante una palabra o frase un determinado numero de lugares relacionado con aquello que se ha escrito, permitiendo listarlos, su nombre, dirección y distancia en kms desde nuestra ubicaxción actual ademas de permitir organizarlos por distancia para saber que lugar se encuentra más cerca y cual mas lejos.
 
 EL proyecto esta realizado con laravel por tanto es necesario tener instalado composer en el computador.
 
